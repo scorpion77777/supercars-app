@@ -13,22 +13,26 @@ export default function Home(props) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className={styles.main}>
+      <main className={styles.main} key={products}>
         {products.map((product) => (
-          <div className="" key={products.id}>
+          <div
+            className="flex flex-col md:container mx-auto px-4 py-4 align-middle items-center"
+            key={products.id}
+          >
             <img
               className={styles.grid}
               src={product.image.url}
               alt={product.name}
             />
-            <p>{product.name}</p>
-            <p>{product.price.formatted_with_symbol}</p>
+            <p className="text-white">{product.name}</p>
+            <p className="text-white">{product.price.formatted_with_symbol}</p>
           </div>
         ))}
       </main>
 
       <footer className={styles.footer}>
         <a
+          className="text-white"
           href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
           target="_blank"
           rel="noopener noreferrer"
