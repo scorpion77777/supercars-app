@@ -2,7 +2,7 @@ import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
 import getCommerce from "../utils/commerce";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 export default function Home(props) {
   const [search, setSearch] = useState("");
@@ -56,7 +56,7 @@ export default function Home(props) {
           <link rel="icon" href="/favicon.ico" />
         </Head>
 
-        <main className="container mx-auto space-y-2 lg:space-y-0 lg:gap-2 lg:grid lg:grid-cols-3 md:text-sm">
+        <main className="container mx-auto space-y-2 lg:space-y-0 lg:gap-2 lg:grid lg:grid-cols-3 md:text-sm mt-8">
           {products
             .filter((val) => {
               if (setSearch === "") {
@@ -72,15 +72,16 @@ export default function Home(props) {
                   key={products.id}
                 >
                   <img
+                    className="border-3 rounded-xl transition ease-in-out delay-150 bg-blue-500 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-300 cursor-pointer shadow-4xl shadow-black"
                     src={product.image.url}
                     alt={product.name}
                     height={550}
                     width={550}
                   />
 
-                  <p className="text-white text-2xl mt-4 p-4">{product.name}</p>
-                  <span className="text-white items-center text-left text-2xl"></span>
-                  <p className="text-white text-2xl mt-4">
+                  <p className="text-white text-xl mt-4 p-4">{product.name}</p>
+                  <span className="text-white items-center text-left text-xl md:text-sm"></span>
+                  <p className="text-white text-2xl">
                     {product.price.formatted_with_symbol}
                   </p>
                   <p className="text-white">{product.variant}</p>

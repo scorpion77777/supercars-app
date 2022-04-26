@@ -12,7 +12,8 @@
     "@chec/commerce.js": "^2.8.0",
     "next": "12.1.5",
     "react": "18.0.0",
-    "react-dom": "18.0.0"
+    "react-dom": "18.0.0",
+    "tailwindcss-border-gradient-radius": "^3.0.1"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.5",
