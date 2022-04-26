@@ -56,7 +56,7 @@ export default function Home(props) {
           <link rel="icon" href="/favicon.ico" />
         </Head>
 
-        <main className={styles.main}>
+        <main className="container mx-auto space-y-2 lg:space-y-0 lg:gap-2 lg:grid lg:grid-cols-3 md:text-sm">
           {products
             .filter((val) => {
               if (setSearch === "") {
@@ -68,20 +68,19 @@ export default function Home(props) {
             .map((product) => {
               return (
                 <div
-                  className="flex flex-col md:container mx-auto px-4 py-4 align-middle items-center"
+                  className="flex flex-col justify-between md:container mx-auto px-4 py-4 align-middle items-center"
                   key={products.id}
                 >
                   <img
-                    className={styles.grid}
                     src={product.image.url}
                     alt={product.name}
+                    height={550}
+                    width={550}
                   />
-                  <p className="text-white text-4xl mt-4 p-4">{product.name}</p>
-                  <span
-                    className="text-white items-center text-left text-2xl"
-                    dangerouslySetInnerHTML={{ __html: product.description }}
-                  ></span>
-                  <p className="text-white text-4xl">
+
+                  <p className="text-white text-2xl mt-4 p-4">{product.name}</p>
+                  <span className="text-white items-center text-left text-2xl"></span>
+                  <p className="text-white text-2xl mt-4">
                     {product.price.formatted_with_symbol}
                   </p>
                   <p className="text-white">{product.variant}</p>
