@@ -3,6 +3,7 @@ import Image from "next/image";
 import styles from "../styles/Home.module.css";
 import getCommerce from "../utils/commerce";
 import { useState } from "react";
+import { Navbar } from "../components/Navbar";
 
 export default function Home(props) {
   const [search, setSearch] = useState("");
@@ -12,6 +13,13 @@ export default function Home(props) {
   const { products } = props;
   return (
     <>
+      <div>
+        <Head>
+          <title>Create Next App</title>
+          <link rel="icon" href="/favicon.ico" />
+        </Head>
+        <Navbar />
+      </div>
       <div className="flex justify-center mt-8 md:justify-center">
         <div className="mb-3 xl:w-96 ">
           <div className="input-group relative flex flex-row p-4 space-x-4 items-stretch w-full mb-4">
