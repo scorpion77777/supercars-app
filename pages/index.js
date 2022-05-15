@@ -25,7 +25,7 @@ export default function Home(props) {
           <div className="input-group relative flex flex-row p-4 space-x-4 items-stretch w-full mb-4">
             <input
               type="search"
-              className="form-control relative flex-auto min-w-0 block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+              className="form-control relative flex-auto min-w-0 block w-full px-3 py-1.5 text-base font-normal text-white bg-black bg-clip-padding border-1 border-solid border-gray-500 rounded transition ease-in-out m-0 focus:text-white focus:bg-gray-700 focus:border-gray-600 focus:outline-none"
               placeholder="Search..."
               aria-label="Search"
               aria-describedby="button-addon2"
@@ -34,7 +34,7 @@ export default function Home(props) {
             <div />
 
             <button
-              className="btn px-2 py-2.5  justify-between text-white font-medium text-xs leading-tight uppercase rounded shadow-md   focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg transition duration-150 ease-in-out items-center"
+              className="btn justify-between text-gray-500 font-medium text-xs leading-tight uppercase rounded shadow-md   focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg transition duration-150 ease-in-out items-center"
               type="button"
               id="button-addon2"
             >

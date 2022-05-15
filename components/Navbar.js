@@ -1,6 +1,5 @@
 import Link from "next/link";
 import { useState } from "react";
-import Logo from "../assets/kanji.svg";
 import { Sling as Hamburger } from "hamburger-react";
 
 export const Navbar = () => {
@@ -12,9 +11,14 @@ export const Navbar = () => {
 
   return (
     <>
-      <nav className="flex items-center flex-wrap bg-gradient-to-r from-gray-900 to-black p-3">
+      <nav className="flex items-center p-2 flex-wrap bg-gradient-to-r from-black to-black">
         <Link href="/">
           <a className="inline-flex items-center p-2 mr-4 ">
+            <img
+              src="/kanji.svg"
+              alt="An SVG of an eye"
+              className="w-12 h-12 px-1 mr-4"
+            />
             <span className="text-base text-white uppercase">
               Supercars-app
             </span>
@@ -25,7 +29,7 @@ export const Navbar = () => {
           className=" inline-flex p-3  rounded lg:hidden text-white ml-auto hover:text-white outline-none"
           onClick={handleClick}
         >
-          <Hamburger size={30} color="#fff" duration={1} />
+          <Hamburger size={30} color="#fff" duration={0.5} />
         </button>
         {/*Note that in this div we will use a ternary operator to decide whether or not to display the content of the div  */}
         <div

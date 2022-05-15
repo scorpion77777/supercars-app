@@ -19,7 +19,10 @@ export default function about() {
     <>
       <Navbar />
 
-      <form className="mt-36" onSubmit={handleSubmit(onSubmit)}>
+      <form
+        className="flex flex-col p-4  mt-12 "
+        onSubmit={handleSubmit(onSubmit)}
+      >
         <input
           type="text"
           placeholder="Kill"
@@ -45,14 +48,14 @@ export default function about() {
           })}
         />
 
-        <select {...register("Title", { required: true })}>
+        <select className="w-16 h-8" {...register("Title", { required: true })}>
           <option value="Mr">Mr</option>
           <option value="Mrs">Mrs</option>
           <option value="Miss">Miss</option>
           <option value="Dr">Dr</option>
         </select>
 
-        <label htmlFor="isDeveloper">Are you a developer?</label>
+        <label htmlFor="isDeveloper">Are you a killer?</label>
         <FormGroup>
           <FormControlLabel
             control={

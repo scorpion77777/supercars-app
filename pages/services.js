@@ -1,10 +1,15 @@
 import { Navbar } from "../components/Navbar";
+import Card from "../components/Card";
 
-export default function services() {
+export default function Service() {
   return (
     <>
       <Navbar />
-      <h2 className="text-white"> Servises page </h2>;
+      <div className="flex flex-row items-center mt-12 justify-between">
+        <Card />
+        <Card />
+        <Card />
+      </div>
     </>
   );
 }
