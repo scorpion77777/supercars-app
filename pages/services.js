@@ -5,7 +5,7 @@ export default function Service() {
   return (
     <>
       <Navbar />
-      <div className="flex flex-row items-center mt-12 justify-between">
+      <div className="container mx-auto space-y-2 lg:space-y-0 lg:gap-2 lg:grid lg:grid-cols-3 md:text-sm mt-8 p-4">
         <Card />
         <Card />
         <Card />
